@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Language {
 
     protected String name;
@@ -21,19 +23,27 @@ public class Language {
 
         // testing out Language class by instantiating a language
         Language spanish = new Language("Spanish", 555000000, "Spain, Latin America, and Equatorial Guinea", "subject-verb-object");
-        spanish.getInfo();
+        //spanish.getInfo(); // Don't need this as we have a for-each loop below
 
         // testing out Mayan class by instantiating a Mayan language
         Mayan tzeltal = new Mayan("Tzeltal", 445856);
-        tzeltal.getInfo();
+        //tzeltal.getInfo(); // Don't need this as we have a for-each loop below
 
         // testing out Sino-Tibetan class by instantiating two Sino-Tibetan languages
         SinoTibetan mandarin = new SinoTibetan("Mandarin Chinese", 1110000000);
         SinoTibetan burmese = new SinoTibetan("Burmese",43000000);
 
-        mandarin.getInfo();
-        burmese.getInfo();
+        //mandarin.getInfo(); // Don't need this as we have a for-each loop below
+        //burmese.getInfo(); // Don't need this as we have a for-each loop below
 
+        ArrayList<Language> languages = new ArrayList<Language>();
+        languages.add(spanish);
+        languages.add(tzeltal);
+        languages.add(mandarin);
+        languages.add(burmese);
 
+        for (Language language : languages) {
+            language.getInfo();
+        }
     }
 }
