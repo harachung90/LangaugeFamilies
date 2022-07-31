@@ -19,8 +19,21 @@ public class Language {
 
     public static void main(String[] args) {
 
+        // testing out Language class by instantiating a language
         Language spanish = new Language("Spanish", 555000000, "Spain, Latin America, and Equatorial Guinea", "subject-verb-object");
         spanish.getInfo();
+
+        // testing out Mayan class by instantiating a Mayan language
+        Mayan tzeltal = new Mayan("Tzeltal", 445856);
+        tzeltal.getInfo();
+
+        // testing out Sino-Tibetan class by instantiating two Sino-Tibetan languages
+        SinoTibetan mandarin = new SinoTibetan("Mandarin Chinese", 1110000000);
+        SinoTibetan burmese = new SinoTibetan("Burmese",43000000);
+
+        mandarin.getInfo();
+        burmese.getInfo();
+
 
     }
 }
